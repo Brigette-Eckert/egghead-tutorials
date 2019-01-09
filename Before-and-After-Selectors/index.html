@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>::before and ::after selectors</title>
+  <meta name="description" content="Utlize before and after selectors with your CSS">
+  <meta name="author" content="Jacob Carter">
+
+  <style>
+    /*
+    
+    ":after / :before" single colon should be used if IE8 support is required.
+
+    */
+    body {
+      padding: 30px;
+    }
+    span {
+      position: relative;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    span::after {
+      content: "!";
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background-color: red;
+      border-radius: 50%;
+      color: white;
+      font-size: 14px;
+      padding: 3px 9px;
+    }
+    p:before {
+      content: "X";
+      color: blue;
+    }
+    p:after {
+      content: "X";
+      color:green;
+    }
+  </style>
+
+</head>
+
+<body>
+  <span>Hello World</span>
+  <p>Foo Bar Baz</p>
+</body>
+</html>
